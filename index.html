@@ -48,22 +48,6 @@
             </svg><!-- <i class="fas fa-home"></i> Font Awesome fontawesome.com -->
           </span>
         </a>
-
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More Work
-          </a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://danielpmorton.github.io/drone_fencing/">
-              Drone Fencing
-            </a>
-            <a class="navbar-item" href="https://stanfordasl.github.io/reachbot_manipulation/">
-              Manipulation with ReachBot
-            </a>
-          </div>
-        </div>
-      </div>
-
     </div>
   </nav>
 
@@ -75,21 +59,23 @@
             <h1 class="title is-1 publication-title">An Intuitive Multi-Task Manipulation Policy for Imitation Learning in Sim and Real Robots</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://danielpmorton.github.io/">Daniel Morton</a> and </span>
+                <a>Yong Wang,</a> 
               <span class="author-block">
-                <a href="https://web.stanford.edu/~pavone/">Marco Pavone</a>
+                <a>Chao  Xu</a> and </span>
+              <span class="author-block">
+                <a>Shengze Cai</a>
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Stanford University</span>
+              <span class="author-block">ZheJiang University</span>
             </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2503.06736.pdf"
+                  <a href=" "
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -97,27 +83,10 @@
                     <span>Paper</span>
                   </a>
                 </span>
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2503.06736" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
-                <!-- Video Link. -->
-                <span class="link-block">
-                  <a href="https://www.youtube.com/watch?v=TbssD__hpCg"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                    </span>
-                    <span>Video</span>
-                  </a>
-                </span>
+
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/StanfordASL/oscbf"
+                  <a href=https://github.com/WangYong-999/roborpc"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -125,17 +94,6 @@
                     <span>Code</span>
                   </a>
                 </span>
-                <span class="link-block">
-                  <a href="https://github.com/danielpmorton/cbfpy"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-python"></i>
-                    </span>
-                    <span>CBFpy</span>
-                  </a>
-                </span>
-                <!-- </div> -->
-
               </div>
             </div>
           </div>
@@ -162,7 +120,7 @@
 
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Overview</h2>
+          <h2 class="title is-3">Multi-Task Comparison</h2>
         </div>
       </div>
 
@@ -898,6 +856,128 @@
                   <video id="video-7" autoplay controls muted loop playsinline
                     style="max-width: 100%; max-height: 100%; margin: 0 auto;">
                     <source src="./static/videos/policy_io_Push_the_blue_ball_into_the_white_square_rollout_37_success.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p class="video-caption" style="margin-top: 10px; text-align: center;">Ours</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 1rem; padding-bottom: 0rem;">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h3 class="title is-4">Random Occlusion and Blur Task</h3>
+              <p>"The 'Random Occlusion and Blur Task' requires the robot to grasp a white print and place it into a white box while three camera images are randomly occluded and blurred."</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     <section class="section">
+        <div class="container">
+          <div class="columns is-centered">
+            <!-- First video column -->
+            <div class="column">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 250px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-1" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/policy_io_Grasp_the_white_3D_printed_object_and_put_it_into_the_white_box_rollout_1_failure.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p class="video-caption" style="margin-top: 10px; text-align: center;">RT-1</p>
+              </div>
+            </div>
+
+            <!-- Second video column -->
+            <div class="column">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 250px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-2" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/policy_io_Grasp_the_white_3D_printed_object_and_put_it_into_the_white_box_rollout_2_failure.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p class="video-caption" style="margin-top: 10px; text-align: center;">Octo</p>
+              </div>
+            </div>
+
+            <!-- Third video column -->
+            <div class="column">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 250px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-3" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/policy_io_Grasp_the_white_3D_printed_object_and_put_it_into_the_white_box_rollout_3_failure.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p class="video-caption" style="margin-top: 10px; text-align: center;">Baku</p>
+              </div>
+            </div>
+
+            <!-- Fourth video column -->
+            <div class="column">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 250px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-4" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/policy_io_Grasp_the_white_3D_printed_object_and_put_it_into_the_white_box_rollout_4_failure.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p class="video-caption" style="margin-top: 10px; text-align: center;">MTACT-18</p>
+              </div>
+            </div>
+
+            <!-- Fifth video column -->
+            <div class="column">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 250px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-5" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/policy_io_Grasp_the_white_3D_printed_object_and_put_it_into_the_white_box_rollout_5_failure.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p class="video-caption" style="margin-top: 10px; text-align: center;">MTACT-34</p>
+              </div>
+            </div>
+
+            <!-- Sixth video column -->
+            <div class="column">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 250px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-6" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/policy_io_Grasp_the_white_3D_printed_object_and_put_it_into_the_white_box_rollout_7_failure.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p class="video-caption" style="margin-top: 10px; text-align: center;">MTACT-101</p>
+              </div>
+            </div>
+
+            <!-- Seventh video column -->
+            <div class="column">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 250px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-7" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/policy_io_Grasp_the_white_3D_printed_object_and_put_it_into_the_white_box_rollout_8_success.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
                 </div>
