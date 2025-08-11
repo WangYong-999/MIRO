@@ -1,101 +1,123 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="description" content="An Intuitive Multi-Task Manipulation Policy for Imitation Learning in Sim and Real Robots">
+  <meta name="keywords"
+    content="Robotics, Manipulation, Optimal Control, Control Barrier Functions, Operational Space Control">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>An Intuitive Multi-Task Manipulation Policy for Imitation Learning in Sim and Real Robots</title>
 
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://danielpmorton.github.io/">
+          <span class="icon">
+            <svg class="svg-inline--fa fa-home fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas"
+              data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+              <path fill="currentColor"
+                d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z">
+              </path>
+            </svg><!-- <i class="fas fa-home"></i> Font Awesome fontawesome.com -->
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Work
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://danielpmorton.github.io/drone_fencing/">
+              Drone Fencing
+            </a>
+            <a class="navbar-item" href="https://stanfordasl.github.io/reachbot_manipulation/">
+              Manipulation with ReachBot
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
 
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">An Intuitive Multi-Task Manipulation Policy for Imitation Learning in Sim and Real Robots</h1>
             <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                <a href="https://danielpmorton.github.io/">Daniel Morton</a> and </span>
+              <span class="author-block">
+                <a href="https://web.stanford.edu/~pavone/">Marco Pavone</a>
+              </span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Stanford University</span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2503.06736.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
                     </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2503.06736" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=TbssD__hpCg"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/StanfordASL/oscbf"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -103,210 +125,431 @@
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a href="https://github.com/danielpmorton/cbfpy"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-python"></i>
+                    </span>
+                    <span>CBFpy</span>
+                  </a>
+                </span>
+                <!-- </div> -->
+
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+  </section>
 
 
 
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Imitation learning draws on human demonstration mechanisms and exhibits excellent skill acquisition performance. To explore the efficiency-enhancing mechanisms of human demonstration in the joint space and the robustness of multi-task imitation, we propose a novel approach, MIRO (An Intuitive Multi-Task \underline{M}anipulation Policy for \underline{I}mitation Learning in Simulated and Real \underline{Ro}bots). First, we design a constrained joint alignment teleoperation (CJAT) approach. By incorporating kinematic, smoothness, collision, and contact constraints into joint control, we enable the robot's imitation motion to be intuitively human while maintaining good stability and acquisition efficiency. Second, we design a multi-task context-fusion imitation (MT-CFI) strategy. By integrating language-guided encoding, multi-scale context enhancement, and gated feature fusion mechanisms, we improve multimodal trajectory learning and enhance its adaptability to diverse tasks in diverse scenarios. Finally, we validate MIRO's effectiveness by applying it to simulated and real robotic manipulation tasks and present a set of evaluation results, demonstrating its potential in various applications.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- / Abstract. -->
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Overview</h2>
+        </div>
+      </div>
+
+      <section class="section" style="padding-top: 1rem; padding-bottom: 0rem;">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h3 class="title is-4">When enforcing safety, many trajectories can satisfy constraints</h3>
+              <p>"Keep the tip of the end-effector in the safe-set"</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="columns is-centered">
+            <!-- First video column -->
+            <div class="column is-3">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 250px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-1" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/policy_io_Wipe_the_table_rollout_1_success.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p class="video-caption" style="margin-top: 10px; text-align: center;">Wipe the Table Rollout 1</p>
+              </div>
+            </div>
+
+            <!-- Second video column -->
+            <div class="column is-3">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 250px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-2" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/policy_io_Wipe_the_table_rollout_3_success.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p class="video-caption" style="margin-top: 10px; text-align: center;">Wipe the Table Rollout 3</p>
+              </div>
+            </div>
+
+            <!-- Third video column -->
+            <div class="column is-3">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 250px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-3" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/policy_io_Wipe_the_table_rollout_6_success.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p class="video-caption" style="margin-top: 10px; text-align: center;">Wipe the Table Rollout 6</p>
+              </div>
+            </div>
+
+            <!-- Fourth video column -->
+            <div class="column is-3">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 250px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-4" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/policy_io_Wipe_the_table_rollout_8_success.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p class="video-caption" style="margin-top: 10px; text-align: center;">Wipe the Table Rollout 8</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0rem; padding-bottom: 3rem;">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h3 class="title is-4">But not all are <em>task-consistent</em></h3>
+              <p>(minimally impeding the robot's performance while remaining safe)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 2rem; padding-bottom: 2rem; background-color: #f5f5f5;">
+        <div class="container">
+          <div class="columns">
+            <!-- Left column with introduction -->
+            <div class="column is-half">
+              <h2 class="title is-5 has-text-left">Introducing</h2>
+              <h1 class="title is- has-text-left">Operational Space Control Barrier Functions</h1>
+            </div>
+
+            <!-- Right column with bullet points -->
+            <div class="column is-half">
+              Optimally balancing safety and performance for manipulators...
+              <ul style="list-style-position: inside; text-align: right;">
+                <li><b>Across hundreds of safety constraints</b></li>
+                <li><b>At over kilohertz control rates</b></li>
+                <li><b>Without requiring workstation hardware</b></li>
+                <li><b>With open-source software in Python</b></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Note: increased top padding to make previous section stand out more -->
+      <section class="section" style="padding-top: 3rem; padding-bottom: 1rem;">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h3 class="title is-4">We demonstrate a variety of common safety constraints</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero is-small">
+        <div class="hero-body">
+          <div class="container">
+            <div id="results-carousel" class="carousel results-carousel">
+              <div class="item item-wh-collision has-text-centered" style="height: 370px;">
+                <h2 class="title is-5">Whole-Body Collision Avoidance</h2>
+                <video poster="" id="wh-collision" autoplay controls muted loop playsinline
+                  style="height: 300px; width: auto; margin: 0 auto; display: block;">
+                  <source src="./static/videos/wb_collision.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-singularity has-text-centered" style="height: 370px;">
+                <h2 class="title is-5">Singularity Avoidance</h2>
+                <video poster="" id="singularity" autoplay controls muted loop playsinline
+                  style="height: 300px; width: auto; margin: 0 auto; display: block;">
+                  <source src="./static/videos/singularity.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-ee-safe-set has-text-centered" style="height: 370px;">
+                <h2 class="title is-5">End-Effector Safe-Set</h2>
+                <video poster="" id="ee-safe-set" autoplay controls muted loop playsinline
+                  style="height: 300px; width: auto; margin: 0 auto; display: block;">
+                  <source src="./static/videos/ee_safe_set.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-wb-safe-set has-text-centered" style="height: 370px;">
+                <h2 class="title is-5">Whole-Body Safe-Set</h2>
+                <video poster="" id="wb-safe-set" autoplay controls muted loop playsinline
+                  style="height: 300px; width: auto; margin: 0 auto; display: block;">
+                  <source src="./static/videos/wb_safe_set.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-joint-limits has-text-centered" style="height: 370px;">
+                <h2 class="title is-5">Joint Limits</h2>
+                <video poster="" id="joint-limits" autoplay controls muted loop playsinline
+                  style="height: 300px; width: auto; margin: 0 auto; display: block;">
+                  <source src="./static/videos/joint_limits.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 1rem; padding-bottom: 0rem;">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h3 class="title is-4">All of which can be enforced <em>simultaneously</em> at over kilohertz control
+                rates</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-four-fifths">
+              <div class="video-container" style="text-align: center;">
+                <video id="combined-video" autoplay controls muted loop playsinline
+                  style="width: 100%; max-width: 800px; margin: 0 auto;">
+                  <source src="./static/videos/combined.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <!-- Image -->
+              <figure class="image">
+                <img src="./static/images/combined_fig.png" alt="Constraint evolution for all safety conditions">
+              </figure>
+              <!-- Header and text below the image -->
+              <div class="content mt-4">
+                <h3 class="title is-4">For all constraints, we can reliably reach (and not exceed) the boundary of
+                  safety <em>without</em> over-conservative behavior.</h3>
+                <p>
+                  Shown above: one teleoperated trajectory, with simultaneous constraint enforcement. Across 168
+                  constraints, the robot remains safe (h > 0) without compromising on performance near the boundary of
+                  safety.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 1rem; padding-bottom: 0rem;">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h3 class="title is-4">We then <em>scale up</em> to highly-cluttered scenes</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="columns is-centered">
+            <!-- First video column -->
+            <div class="column is-6">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 300px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-left" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/clutter_obstacles.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second video column -->
+            <div class="column is-6">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 300px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-middle" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/clutter_traj.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0rem; padding-bottom: 1rem;">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h3 class="title is-4">And maintain kilohertz control rates even with <em>over 400</em> collision-checking
+                constraints.</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="section" style="padding-top: 1rem; padding-bottom: 0rem;">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h3 class="title is-4">By evaluating the full dynamics of the manipulator, we also maintain high
+                performance even under <em>input constraints</em> and <em>dynamic motion</em>.</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="columns is-centered">
+            <!-- First video column -->
+            <div class="column is-6">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 300px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-left" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/dynamic_velocity.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p class="video-caption" style="margin-top: 10px; text-align: center;">❌ Input-constrained kinematic
+                  model: Cannot account for torque limits</p>
+              </div>
+            </div>
+
+            <!-- Second video column -->
+            <div class="column is-6">
+              <div class="video-container" style="text-align: center;">
+                <div class="video-wrapper"
+                  style="height: 300px; display: flex; align-items: center; justify-content: center;">
+                  <video id="video-middle" autoplay controls muted loop playsinline
+                    style="max-width: 100%; max-height: 100%; margin: 0 auto;">
+                    <source src="./static/videos/dynamic_torque.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p class="video-caption" style="margin-top: 10px; text-align: center;">✅ Input-constrained dynamic
+                  model: Retains good tracking even under torque limits</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-three-quarters has-text-centered">
+              <h3 class="title is-4">Software</h3>
+              <p class="mb-4">
+                Our high-performance and easy-to-use Python package for CBFs is available on <a
+                  href="https://pypi.org/project/cbfpy/">PyPI</a>
+                along with <a href="https://danielpmorton.github.io/cbfpy/">full documentation</a>
+              </p>
+              <div class="box has-background-light">
+                <pre><code style="font-size: 1.3rem;">pip install cbfpy</code></pre>
+              </div>
+              <p>and the OSCBF implementation is available at <a href="https://github.com/StanfordASL/oscbf/">this
+                  project's GitHub repository</a>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-4">Hardware Experiments</h2>
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/MjkiWh9IGEY?si=n44zhIWGbFs29O6Z" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <h2 class="title">BibTeX</h2>
+          <pre><code>
+      author = {Yong Wang, Chao Xu, Shengze Cai},
+      title = {An Intuitive Multi-Task Manipulation Policy for Imitation Learning in Sim and Real Robots},
+      year = {2025},
+      </code></pre>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <p>
+              Website template borrowed from <a href="https://nerfies.github.io/">Nerfies</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  </footer>
 
+</body>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</html>
